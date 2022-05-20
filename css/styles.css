@@ -1,5 +1,7 @@
 body {
     background-image: linear-gradient(to right, #7401b8, #692fc3, #5e60ce, #5390d9, #4fa8de, #55cfe1, #72efdd);
+    display: flex;
+    flex-direction: column;
 }
 
 .headerMain {
@@ -39,10 +41,22 @@ button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left: 600px;
+    margin-right: 600px;
 }   
+
+
+.divs {
+    display: inline-block;
+    border: 1px solid #80ffdb;
+    flex-grow: 3;
+    min-width: 20px;
+    min-height: 20px; 
+    margin: -1px 0 0 -1px;
+}
 
 .color {
     background-color: black;
 }
-
 
