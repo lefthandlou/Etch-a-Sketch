@@ -11,21 +11,24 @@ function pickNumber() {
 //TODO - make grid a block, with no orphans
 
 function newDiv() {
-    let userInput=pickNumber();
+    let userInput = pickNumber();
     let gridSize = (userInput)*(userInput);
     for (let i=0; i<gridSize; i++) {
         let newContainer = document.createElement('div');
         newContainer.classList.add('divs');
-        sketchContainer.append(newContainer);
-        newContainer.style.border = '1px solid #80ffdb';
-        newContainer.style.width = '100px';
-        newContainer.style.height = '100px'; 
+        sketchContainer.append(newContainer); 
     }; 
     const sketchCells = document.querySelectorAll('.divs'); 
-    //console.log(sketchCells);
-    return sketchCells;
+    console.log(sketchCells);
+    sketchCells.forEach(cell => {
+        cell.addEventListener('mouseout', function handleHover(event) {
+            cell.classList.add('color');
+        });
+    });
 }
 
+//TODO rearrage so grid size prompt window pops up when reset button is clicked
+//and get rid of 'click me' grid sizer button
 
 //event listener to hook user input and new div creation to button click
 function windowPrompt() {
@@ -43,23 +46,7 @@ function reloadPage() {
 	windowPrompt();	 
 }
 
-//TODO set color schemes for drawing mode
-
-//TODO make nodelist from newContainer for use in drawing function
-
-
-//Working mouseout for main sketchpad container below
-/*sketchContainer.addEventListener('mouseout' , function changeColor(event) {
-    sketchContainer.classList.add('color');
-})*/
-
-
-/*TODO Function hoverListener () {
-    foreach addEventListener('mouseout') in all of new divs created; mouseout by user
-    changes class name for new CSS styling for the color in that div to either a set color or a 
-    rainbow gradient. If re-hovered, do not change again.
-}*/
-
+//TODO set color schemes for drawing mode, one monochrome and one 'rainbow'
 
 
 console.log(reloadPage());
