@@ -32,8 +32,9 @@ function newDiv() {
         let newContainer = document.createElement('div');
         newContainer.classList.add('divs');
         sketchContainer.append(newContainer); 
-        let cellHeight = 1000/userInput;
-        let cellWidth = 1000/userInput;
+        //Use JS to set main container height/width and divide that?
+        let cellHeight = ((1000/userInput)-1);
+        let cellWidth = ((1000/userInput)-1);
         let cellHeightString=(cellHeight.toString() + 'px');
         let cellWidthString= (cellWidth.toString() + 'px');
         console.log(cellHeightString);
