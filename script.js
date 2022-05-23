@@ -3,21 +3,28 @@ const sketchContainer = document.querySelector('.sketchContainer');
 
 //Prompt user to input number for size of grid
 //TODO format user input for squared grid/error message
+//TODO limit number that can be input with if/else
 function pickNumber() {
     let userInput=window.prompt('input a number');            
     return userInput;  
 }
 
+//TODO tie background color mode to buttons
+//TODO grayscale color mode
+//TODO all-black color mode
 //Randomly select color from selection to put as div background
 function backgroundColor(){
-    let colorSelections = ['#7401b8', '#692fc3', '#5e60ce', '#5390d9', '#4fa8de', '#55cfe1', '#72efdd'];
-    let pickColor = colorSelections[Math.floor(Math.random()*colorSelections.length)];
+    let colorSelections = ['#7401b8', '#692fc3', '#5e60ce', '#5390d9', '#4fa8de', 
+    '#55cfe1', '#72efdd'];
+    let pickColor = colorSelections[Math.floor(Math.random()
+        *colorSelections.length)];
     let stringColor = pickColor.toString();
     return stringColor;
 }
 
 
 //For loop creates new divs per user specification, squared
+//TODO separation of concerns - split into two functions
 function newDiv() {
     let userInput = pickNumber();
     let gridSize = (userInput)*(userInput);
@@ -25,6 +32,14 @@ function newDiv() {
         let newContainer = document.createElement('div');
         newContainer.classList.add('divs');
         sketchContainer.append(newContainer); 
+        let cellHeight = 1000/userInput;
+        let cellWidth = 1000/userInput;
+        let cellHeightString=(cellHeight.toString() + 'px');
+        let cellWidthString= (cellWidth.toString() + 'px');
+        console.log(cellHeightString);
+        console.log(cellWidthString);
+        newContainer.style.height= (cellHeightString);
+        newContainer.style.width = (cellWidthString);
     }; 
     
     const sketchCells = document.querySelectorAll('.divs'); 
