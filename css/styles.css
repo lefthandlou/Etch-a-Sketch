@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to right, #7401b8, #692fc3, #5e60ce, #5390d9, #4fa8de, #55cfe1, #72efdd);
+    background-image: linear-gradient(to right, #19191a, #692fc3, #5e60ce, #5390d9, #4fa8de, #55cfe1, #72efdd);
     display: flex;
     flex-direction: column;
 }
@@ -30,33 +30,40 @@ button {
     padding: 5px;
 }
 
-    .buttonContainer {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 10px;
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
     
-    }
+}
 
+.containerFlex {
+    display: flex;
+    justify-content: center;
+    
+    
+}
 .sketchContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
-    margin-left: 600px;
-    margin-right: 600px;
+    width: 1000px;
+    height: 1000px;
 }   
 
+
+
+
+/*TODO - make square grid a block, with no orphans*/
 
 .divs {
     display: inline-block;
     border: 1px solid #80ffdb;
-    flex-grow: 3;
-    min-width: 20px;
-    min-height: 20px; 
     margin: -1px 0 0 -1px;
+    
 }
 
-.color {
-    background-color: black;
-}
+
+
 
