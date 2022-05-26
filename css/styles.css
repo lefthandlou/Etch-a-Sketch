@@ -1,7 +1,7 @@
 body {
-    background-image: linear-gradient(to right, #19191a, #692fc3, #5e60ce, #5390d9, #4fa8de, #55cfe1, #72efdd);
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(to right, #19191a, #692fc3, #5e60ce, #5390d9, #4fa8de, #55cfe1, #72efdd);
 }
 
 .headerMain {
@@ -9,15 +9,38 @@ body {
     display: flex;
     justify-content: center;
     color: #342b66; 
-    font-size: 50px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.instructionsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.stepOne, 
+.stepTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border: 1px solid #80ffdb;
+    width: 225px;
+    margin: 5px;
+    
 }
 
 .textMain {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 15px;
     color:#80ffdb; 
+    margin: 10px;
+    padding: 0px;
 }
 
 button {
@@ -40,30 +63,34 @@ button {
 .containerFlex {
     display: flex;
     justify-content: center;
-    
-    
 }
 .sketchContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
-    width: 1000px;
-    height: 1000px;
+    margin-top: 30px;
+    width: 700px;
+    height: 700px;
+    margin-bottom: 30px;
 }   
-
-
-
-
-/*TODO - make square grid a block, with no orphans*/
 
 .divs {
     display: inline-block;
     border: 1px solid #80ffdb;
-    margin: -1px 0 0 -1px;
-    
+    margin: -1px 0 0 -1px;  
 }
 
+.colorModes {
+    display: flex;
+    justify-content: center;
+}
 
+.startGrid {
+    display: inline-block;
+    border: 1px solid #80ffdb;
+    height: 171px;
+    width: 171px;    
+    margin: -1px 0 0 -1px;  
+}
 
 
