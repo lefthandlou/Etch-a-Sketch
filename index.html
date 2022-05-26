@@ -10,22 +10,36 @@
 
     <body>
         <h3 class="headerMain">Etch-a-Sketch</h3>
-        <p class="textMain">
-            Blah blah blah 
-            <!--TODO blurb here with instructions/explanation-->
-        </p>
+        <div class="instructionsContainer">
 
-        <!-- TODO Make starting 16x16 grid -->
-        <div class="buttonContainer">
-            <button class="setGrid">Click me</button>
-            <button class="reset">Reset</button>
-            <!--TODO Color mode buttons-->
+            <div class = 'stepOne'>
+                <p class = "textMain"><strong>Step 1:</strong></p>
+                <p class = 'textMain'>Set the size you want your grid to be using 
+                    the 'Grid Size' button below: i.e. if you want a grid that is 10x10, enter 10.
+                    Click the 'Reset' button to start over. </p>
+               
+
+                <div class="buttonContainer">
+                    <button class="setGrid">Grid Size</button>
+                    <button class="reset">Reset</button>
+                </div>
+            </div>
+            
+            <div class = 'stepTwo'>
+                <p class = "textMain"><strong>Step 2:</strong></p>
+                <p class = 'textMain'>Draw!</p>
+            </div>
+          
         </div>
+
+        
 
         <div class = "containerFlex">
             <div class="sketchContainer">
             </div>
         </div>
+
+       
         
           
     </body>
